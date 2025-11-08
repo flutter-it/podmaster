@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_it/flutter_it.dart';
 
 import '../../common/view/no_search_result_page.dart';
+import '../../common/view/theme.dart';
 import '../../common/view/ui_constants.dart';
 import '../../extensions/build_context_x.dart';
 import '../podcast_manager.dart';
@@ -64,7 +65,9 @@ class _PodcastSearchViewHeaderState extends State<PodcastSearchViewHeader> {
 
   @override
   Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+    padding: const EdgeInsets.symmetric(
+      horizontal: 16,
+    ).copyWith(top: 16, bottom: 4),
     child: TextField(
       controller: _controller,
       onChanged: di<PodcastManager>().textChangedCommand.execute,
@@ -72,6 +75,7 @@ class _PodcastSearchViewHeaderState extends State<PodcastSearchViewHeader> {
         prefixIcon: const Icon(Icons.search),
         label: Text(context.l10n.search),
         suffixIcon: IconButton(
+          style: getTextFieldSuffixStyle(context),
           icon: const Icon(Icons.clear),
           onPressed: () {
             _controller.clear();

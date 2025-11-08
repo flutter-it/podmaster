@@ -5,6 +5,6 @@ extension DurationX on Duration {
     final minutes = twoDigits(inMinutes.remainder(60));
     final seconds = twoDigits(inSeconds.remainder(60));
 
-    return <String>[if (inHours > 0) hours, minutes, seconds].join(':');
+    return <String>[hours, minutes, seconds].join(':');
   }
 }

@@ -1,10 +1,12 @@
 import 'dart:async';
 
+import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 import 'package:podcast_search/podcast_search.dart';
 
 import '../common/logging.dart';
 import '../extensions/date_time_x.dart';
+import '../extensions/podcast_x.dart';
 import '../extensions/shared_preferences_x.dart';
 import '../extensions/string_x.dart';
 import '../notifications/notifications_service.dart';
@@ -48,34 +50,34 @@ class PodcastService {
     int limit = 10,
     Attribute attribute = Attribute.none,
   }) async {
+    SearchResult res;
     try {
       if (searchQuery == null || searchQuery.isEmpty == true) {
-        return await _search.charts(
+        res = await _search.charts(
           genre: podcastGenre == PodcastGenre.all ? '' : podcastGenre.id,
           limit: limit,
-          country: country ?? Country.germany,
+          country: country ?? Country.none,
           language: country != null || language?.isoCode == null
               ? ''
               : language!.isoCode,
         );
       } else {
-        var res = await _search.search(
+        res = await _search.search(
           searchQuery,
-          country: country ?? Country.germany,
+          country: country ?? Country.none,
           language: country != null || language?.isoCode == null
               ? ''
               : language!.isoCode,
           limit: limit,
           attribute: attribute,
         );
-
-        if (res.successful == false) {
-          throw Exception(
-            'Search failed: ${res.lastError} ${res.lastErrorType.name}',
-          );
-        }
-        return res;
       }
+      if (res.successful == false) {
+        throw Exception(
+          'Search failed: ${res.lastError} ${res.lastErrorType.name}',
+        );
+      }
+      return res;
     } catch (e) {
       rethrow;
     }
@@ -141,6 +143,10 @@ class PodcastService {
       _episodeCache[feedUrl];
   final Map<String, List<EpisodeMedia>> _episodeCache = {};
 
+  final Map<String, String?> _podcastDescriptionCache = {};
+  String? getPodcastDescriptionFromCache(String? feedUrl) =>
+      _podcastDescriptionCache[feedUrl];
+
   Future<List<EpisodeMedia>> findEpisodes({
     Item? item,
     String? feedUrl,
@@ -170,26 +176,11 @@ class PodcastService {
         imageUrl: podcast!.image!,
       );
     }
-    final episodes =
-        podcast?.episodes
-            .where((e) => e.contentUrl != null)
-            .map(
-              (e) => EpisodeMedia(
-                e.contentUrl!,
-                episode: e,
-                feedUrl: url,
-                albumArtUrl: item?.artworkUrl600 ?? item?.artworkUrl,
-                collectionName: item?.collectionName,
-                artist: item?.artistName,
-                genres: [
-                  if (item?.primaryGenreName != null) item!.primaryGenreName!,
-                ],
-              ),
-            )
-            .toList() ??
-        <EpisodeMedia>[];
+
+    final episodes = podcast?.toEpisodeMediaList(url, item) ?? <EpisodeMedia>[];
 
     _episodeCache[url] = episodes;
+    _podcastDescriptionCache[url] = podcast?.description;
 
     return episodes;
   }

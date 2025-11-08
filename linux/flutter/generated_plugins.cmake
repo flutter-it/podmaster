@@ -3,6 +3,7 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  gtk
   local_notifier
   media_kit_libs_linux
   media_kit_video
@@ -11,6 +12,7 @@ list(APPEND FLUTTER_PLUGIN_LIST
   url_launcher_linux
   volume_controller
   window_manager
+  yaru_window_linux
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

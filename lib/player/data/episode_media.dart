@@ -25,6 +25,7 @@ class EpisodeMedia extends UniqueMedia {
   final String _feedUrl;
   final int? _bitRate;
   final String? _albumArtUrl;
+  String? get albumArtUrl => _albumArtUrl;
   final List<String> _genres;
   final String? _collectionName;
   final String? _artist;
@@ -43,7 +44,7 @@ class EpisodeMedia extends UniqueMedia {
       : Future.value(null);
 
   @override
-  String? get artUrl => episode.imageUrl ?? _albumArtUrl;
+  String? get artUrl => episode.imageUrl;
 
   @override
   String? get artist => _artist;

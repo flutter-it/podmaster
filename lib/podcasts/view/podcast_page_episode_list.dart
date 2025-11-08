@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_it/flutter_it.dart';
 import 'package:podcast_search/podcast_search.dart';
+import '../../common/view/html_text.dart';
+import '../../extensions/build_context_x.dart';
 import '../../player/player_manager.dart';
 import '../podcast_library_service.dart';
 import '../podcast_manager.dart';
@@ -13,6 +15,7 @@ class PodcastPageEpisodeList extends StatelessWidget with WatchItMixin {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
     callOnce(
       (context) => di<PodcastManager>().fetchEpisodeMediaCommand(podcastItem),
     );
@@ -53,10 +56,8 @@ class PodcastPageEpisodeList extends StatelessWidget with WatchItMixin {
 
           return ExpansionTile(
             initiallyExpanded: selected,
-            textColor: selected ? Theme.of(context).colorScheme.primary : null,
-            collapsedTextColor: selected
-                ? Theme.of(context).colorScheme.primary
-                : null,
+            textColor: selected ? theme.colorScheme.primary : null,
+            collapsedTextColor: selected ? theme.colorScheme.primary : null,
             title: Row(
               spacing: 4,
               children: [
@@ -64,9 +65,7 @@ class PodcastPageEpisodeList extends StatelessWidget with WatchItMixin {
                   onPressed: onPressed,
                   icon: Icon(
                     isPlaying && selected ? Icons.pause : Icons.play_arrow,
-                    color: selected
-                        ? Theme.of(context).colorScheme.primary
-                        : null,
+                    color: selected ? theme.colorScheme.primary : null,
                   ),
                 ),
                 Expanded(child: Text(episode.title ?? 'No Title')),
@@ -75,9 +74,12 @@ class PodcastPageEpisodeList extends StatelessWidget with WatchItMixin {
 
             children: <Widget>[
               ListTile(
-                selectedColor: Theme.of(context).colorScheme.primary,
+                selectedColor: theme.colorScheme.primary,
                 selected: selected,
-                subtitle: Text(episode.description ?? 'No Description'),
+                subtitle: HtmlText(
+                  text: episode.description ?? 'No Description',
+                ),
+
                 leading: const SizedBox(width: 20),
                 trailing: DownloadButton(
                   audio: episode,

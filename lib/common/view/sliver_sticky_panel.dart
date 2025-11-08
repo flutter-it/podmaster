@@ -4,8 +4,8 @@ import '../../extensions/build_context_x.dart';
 import 'sliver_app_bar_bottom_space.dart';
 import 'ui_constants.dart';
 
-class SliverAudioPageControlPanel extends StatelessWidget {
-  const SliverAudioPageControlPanel({
+class SliverStickyPanel extends StatelessWidget {
+  const SliverStickyPanel({
     super.key,
     required this.controlPanel,
     this.onStretchTrigger,

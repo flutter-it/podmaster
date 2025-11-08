@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_it/flutter_it.dart';
 import 'package:media_kit_video/media_kit_video.dart';
+import 'package:yaru/yaru.dart';
 
 import '../../common/view/theme.dart';
 import '../../common/view/ui_constants.dart';
 import '../../extensions/build_context_x.dart';
-import '../../extensions/color_scheme_x.dart';
 import '../player_manager.dart';
 import 'player_album_art.dart';
 import 'player_control_mixin.dart';
@@ -90,23 +90,23 @@ class PlayerFullView extends StatelessWidget
       child: Dialog.fullscreen(
         child: Column(
           children: [
-            AppBar(
+            YaruWindowTitleBar(
               title: Text('Media Player', style: TextStyle(color: iconColor)),
               backgroundColor: Colors.transparent,
-              automaticallyImplyLeading: false,
-              leading: IconButton(
-                icon: Icon(Icons.arrow_downward, color: iconColor),
-                onPressed: () => togglePlayerFullMode(context),
-              ),
+              border: BorderSide.none,
               actions: [
+                IconButton(
+                  icon: Icon(Icons.arrow_downward, color: iconColor),
+                  onPressed: () => togglePlayerFullMode(context),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: IconButton(
                     isSelected: showPlayerExplorer,
                     icon: Icon(
                       showPlayerExplorer
-                          ? Icons.queue_music_outlined
-                          : Icons.queue_music,
+                          ? Icons.view_sidebar
+                          : Icons.view_sidebar_outlined,
                       color: iconColor,
                     ),
                     onPressed: () => di<PlayerManager>().updateState(
@@ -139,12 +139,17 @@ class PlayerFullView extends StatelessWidget
                             if (isPortrait ||
                                 (!isPortrait && !showPlayerExplorer)) ...[
                               const SizedBox(height: kBigPadding),
-                              PlayerTrackInfo(
-                                textColor: iconColor,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                artistStyle: context.textTheme.bodyMedium,
-                                titleStyle: context.textTheme.bodyLarge,
-                                durationStyle: context.textTheme.bodySmall,
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 16,
+                                ),
+                                child: PlayerTrackInfo(
+                                  textColor: iconColor,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  artistStyle: context.textTheme.bodyMedium,
+                                  titleStyle: context.textTheme.bodyLarge,
+                                  durationStyle: context.textTheme.bodySmall,
+                                ),
                               ),
                             ],
                           ],

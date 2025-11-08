@@ -24,6 +24,7 @@ dependencies:
   flutter_it: ^1.0.2
   flutter_localizations:
     sdk: flutter
+  flutter_widget_from_html_core: ^0.17.0
   future_loading_dialog: ^0.3.0
   html: ^0.15.6
   local_notifier: ^0.1.6
@@ -55,6 +56,7 @@ dependencies:
 
   window_manager: ^0.5.1
   xdg_directories: ^1.1.0
+  yaru: ^8.3.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.14.4

@@ -2,6 +2,7 @@ import 'package:flutter_it/flutter_it.dart';
 import 'package:podcast_search/podcast_search.dart';
 
 import '../common/logging.dart';
+import '../extensions/country_x.dart';
 import '../player/data/episode_media.dart';
 import 'podcast_service.dart';
 
@@ -12,8 +13,11 @@ class PodcastManager {
       printMessageInDebugMode(e.error, s);
     };
     updateSearchCommand = Command.createAsync<String?, SearchResult>(
-      (String? query) async =>
-          _podcastService.search(searchQuery: query, limit: 20),
+      (String? query) async => _podcastService.search(
+        searchQuery: query,
+        limit: 20,
+        country: CountryX.platformDefault,
+      ),
       initialValue: SearchResult(items: []),
     );
     textChangedCommand = Command.createSync((s) => s, initialValue: '');

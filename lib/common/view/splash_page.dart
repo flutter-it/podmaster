@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yaru/yaru.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key, this.title});
@@ -7,7 +8,10 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: title ?? const Text('')),
+    appBar: YaruWindowTitleBar(
+      title: title ?? const Text(''),
+      border: BorderSide.none,
+    ),
     body: const Center(child: CircularProgressIndicator.adaptive()),
   );
 }

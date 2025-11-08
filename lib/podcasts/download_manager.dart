@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:path/path.dart' as p;
 import 'package:safe_change_notifier/safe_change_notifier.dart';
 
-import '../extensions/build_context_x.dart';
 import '../extensions/date_time_x.dart';
 import '../player/data/episode_media.dart';
 import '../settings/settings_service.dart';
@@ -174,14 +173,8 @@ void downloadMessageStreamHandler(
   void Function() cancel,
 ) {
   if (snapshot.hasData) {
-    ScaffoldMessenger.maybeOf(context)?.showSnackBar(
-      SnackBar(
-        content: Text(snapshot.data!),
-        action: SnackBarAction(
-          label: context.l10n.confirmCancel,
-          onPressed: cancel,
-        ),
-      ),
-    );
+    ScaffoldMessenger.maybeOf(
+      context,
+    )?.showSnackBar(SnackBar(content: Text(snapshot.data!)));
   }
 }

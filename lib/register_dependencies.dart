@@ -1,9 +1,11 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_it/flutter_it.dart';
 import 'package:media_kit/media_kit.dart';
 import 'package:media_kit_video/media_kit_video.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:window_manager/window_manager.dart';
 
 import 'app/app_config.dart';
 import 'common/platforms.dart';
@@ -18,6 +20,24 @@ import 'settings/settings_service.dart';
 
 void registerDependencies() {
   di
+    ..registerSingletonAsync<WindowManager>(() async {
+      final wm = WindowManager.instance;
+      await wm.ensureInitialized();
+      await wm.waitUntilReadyToShow(
+        const WindowOptions(
+          backgroundColor: Colors.transparent,
+          minimumSize: Size(500, 700),
+          skipTaskbar: false,
+          titleBarStyle: TitleBarStyle.hidden,
+        ),
+        () async {
+          await windowManager.show();
+          await windowManager.focus();
+        },
+      );
+
+      return wm;
+    })
     ..registerSingletonAsync<SharedPreferences>(SharedPreferences.getInstance)
     ..registerLazySingleton<VideoController>(() {
       MediaKit.ensureInitialized();

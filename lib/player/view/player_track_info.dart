@@ -99,8 +99,8 @@ class PlayerTrackProgressTimeText extends StatelessWidget with WatchItMixin {
 
     final position = watchValue((PlayerManager p) => p.position);
 
-    final positionWidth = (position.inHours > 0) ? 48.0 : 35.0;
-    final durationWidth = (duration.inHours > 0) ? 48.0 : 35.0;
+    const positionWidth = 60.0;
+    const durationWidth = 60.0;
 
     const slashWidth = 5.0;
 

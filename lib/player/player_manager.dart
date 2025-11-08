@@ -154,9 +154,9 @@ class PlayerManager extends BaseAudioHandler with SeekHandler {
 
   Playlist get playlist => _player.state.playlist;
 
-  Stream<UniqueMedia?> get currentMediaStream => _player.stream.playlist
-      .where((playlist) => playlist.medias.isNotEmpty)
-      .asyncMap((playlist) async {
+  Stream<UniqueMedia?> get currentMediaStream =>
+      _player.stream.playlist.asyncMap((playlist) async {
+        if (playlist.medias.isEmpty) return null;
         final media = playlist.medias[playlist.index] as UniqueMedia;
 
         final artUri =
@@ -181,8 +181,7 @@ class PlayerManager extends BaseAudioHandler with SeekHandler {
         }
 
         return media;
-      })
-      .distinct();
+      }).distinct();
 
   UniqueMedia? get currentMedia => _player.state.playlist.medias.isEmpty
       ? null
