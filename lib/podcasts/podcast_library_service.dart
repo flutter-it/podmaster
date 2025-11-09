@@ -140,12 +140,23 @@ class PodcastLibraryService {
       .then(notify);
   void removeSubscribedPodcastArtist(String feedUrl) =>
       _sharedPreferences.remove(feedUrl + SPKeys.podcastArtistSuffix);
+  List<String>? getSubScribedPodcastGenreList(String feedUrl) =>
+      _sharedPreferences.getStringList(feedUrl + SPKeys.podcastGenreListSuffix);
+  void addSubscribedPodcastGenreList({
+    required String feedUrl,
+    required List<String> genreList,
+  }) => _sharedPreferences
+      .setStringList(feedUrl + SPKeys.podcastGenreListSuffix, genreList)
+      .then(notify);
+  void removeSubscribedPodcastGenreList(String feedUrl) =>
+      _sharedPreferences.remove(feedUrl + SPKeys.podcastGenreListSuffix);
 
   Future<void> addPodcast({
     required String feedUrl,
     required String? imageUrl,
     required String name,
     required String artist,
+    required List<String> genreList,
   }) async {
     if (isPodcastSubscribed(feedUrl)) return;
     await _sharedPreferences
@@ -159,6 +170,7 @@ class PodcastLibraryService {
     }
     addSubscribedPodcastName(feedUrl: feedUrl, name: name);
     addSubscribedPodcastArtist(feedUrl: feedUrl, artist: artist);
+    addSubscribedPodcastGenreList(feedUrl: feedUrl, genreList: genreList);
     await _checkAndAddPodcastLastUpdated(feedUrl);
   }
 
@@ -178,7 +190,15 @@ class PodcastLibraryService {
   }
 
   Future<void> addPodcasts(
-    List<({String feedUrl, String? imageUrl, String name, String artist})>
+    List<
+      ({
+        String feedUrl,
+        String? imageUrl,
+        String name,
+        String artist,
+        List<String> genreList,
+      })
+    >
     podcasts,
   ) async {
     if (podcasts.isEmpty) return;
@@ -191,6 +211,10 @@ class PodcastLibraryService {
         }
         addSubscribedPodcastName(feedUrl: p.feedUrl, name: p.name);
         addSubscribedPodcastArtist(feedUrl: p.feedUrl, artist: p.artist);
+        addSubscribedPodcastGenreList(
+          feedUrl: p.feedUrl,
+          genreList: p.genreList,
+        );
         await _checkAndAddPodcastLastUpdated(p.feedUrl);
       }
     }

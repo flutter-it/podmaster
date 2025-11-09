@@ -51,16 +51,16 @@ class DownloadManager extends SafeChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> deleteDownload({required EpisodeMedia? audio}) async {
-    if (audio?.url != null &&
+  Future<void> deleteDownload({required EpisodeMedia? media}) async {
+    if (media?.url != null &&
         _settingsService.downloadsDir != null &&
-        audio?.feedUrl != null) {
+        media?.feedUrl != null) {
       await _libraryService.removeDownload(
-        episodeID: audio!.url!,
-        feedUrl: audio.feedUrl,
+        episodeID: media!.url!,
+        feedUrl: media.feedUrl,
       );
-      if (_values.containsKey(audio.url)) {
-        _values.update(audio.url!, (value) => null);
+      if (_values.containsKey(media.url)) {
+        _values.update(media.url!, (value) => null);
       }
 
       notifyListeners();

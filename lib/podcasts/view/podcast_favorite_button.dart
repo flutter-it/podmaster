@@ -35,6 +35,8 @@ class PodcastFavoriteButton extends StatelessWidget with WatchItMixin {
             name: podcastItem.collectionName!,
             artist: podcastItem.artistName!,
             imageUrl: podcastItem.bestArtworkUrl!,
+            genreList:
+                podcastItem.genre?.map((e) => e.name).toList() ?? <String>[],
           );
     final icon = Icon(isSubscribed ? Icons.favorite : Icons.favorite_border);
 

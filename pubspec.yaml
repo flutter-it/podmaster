@@ -13,6 +13,7 @@ dependencies:
     git:
       url: https://github.com/Feichtmeier/audio-service-mpris
       ref: ad6f743b73e320670449026fa1852d9978438bb9
+  blur: ^4.0.2
   cached_network_image: ^3.4.1
   collection: ^1.19.1
   custom_adaptive_scaffold: ^2.0.2
@@ -29,6 +30,7 @@ dependencies:
   flutter_widget_from_html_core: ^0.17.0
   future_loading_dialog: ^0.3.0
   html: ^0.15.6
+  intl: ^0.20.2
   local_notifier: ^0.1.6
   media_kit:
     git:

@@ -67,7 +67,7 @@ class DownloadButton extends StatelessWidget with WatchItMixin {
               ? null
               : () {
                   if (download) {
-                    manager.deleteDownload(audio: audio);
+                    manager.deleteDownload(media: audio);
                   } else {
                     addPodcast?.call();
                     manager.startDownload(

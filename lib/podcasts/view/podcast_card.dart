@@ -81,23 +81,6 @@ class _PodcastCardState extends State<PodcastCard> {
                             ),
                           ),
                   ),
-                  if (_hovered)
-                    Positioned.fill(
-                      child: Container(
-                        margin: EdgeInsets.zero,
-                        decoration: BoxDecoration(
-                          color: Colors.black.withAlpha(150),
-                          borderRadius: borderRadiusGeometry,
-                        ),
-                        child: const Center(
-                          child: Icon(
-                            Icons.open_in_new,
-                            size: 64,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
                 ],
               ),
               Flexible(

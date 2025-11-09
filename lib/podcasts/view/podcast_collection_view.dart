@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_it/flutter_it.dart';
 import 'package:podcast_search/podcast_search.dart';
@@ -32,11 +33,20 @@ class PodcastCollectionView extends StatelessWidget with WatchItMixin {
           key: ValueKey(feedUrl),
           podcastItem: Item(
             feedUrl: feedUrl,
+            artistName: di<PodcastLibraryService>().getSubscribedPodcastArtist(
+              feedUrl,
+            ),
             collectionName: di<PodcastLibraryService>()
                 .getSubscribedPodcastName(feedUrl),
             artworkUrl: di<PodcastLibraryService>().getSubscribedPodcastImage(
               feedUrl,
             ),
+            genre:
+                di<PodcastLibraryService>()
+                    .getSubScribedPodcastGenreList(feedUrl)
+                    ?.mapIndexed((i, e) => Genre(i, e))
+                    .toList() ??
+                <Genre>[],
           ),
         );
       },

@@ -3,6 +3,8 @@ import 'package:flutter_it/flutter_it.dart';
 import 'package:podcast_search/podcast_search.dart';
 import '../../common/view/html_text.dart';
 import '../../extensions/build_context_x.dart';
+import '../../extensions/date_time_x.dart';
+import '../../extensions/duration_x.dart';
 import '../../player/player_manager.dart';
 import '../podcast_library_service.dart';
 import '../podcast_manager.dart';
@@ -76,10 +78,13 @@ class PodcastPageEpisodeList extends StatelessWidget with WatchItMixin {
               ListTile(
                 selectedColor: theme.colorScheme.primary,
                 selected: selected,
+                title: Text(
+                  '${episode.creationDateTime!.unixTimeToDateString} · ${episode.duration?.formattedTime ?? 'Unknown duration'}',
+                ),
+                titleTextStyle: theme.textTheme.labelSmall,
                 subtitle: HtmlText(
                   text: episode.description ?? 'No Description',
                 ),
-
                 leading: const SizedBox(width: 20),
                 trailing: DownloadButton(
                   audio: episode,
@@ -88,6 +93,7 @@ class PodcastPageEpisodeList extends StatelessWidget with WatchItMixin {
                     imageUrl: episode.artUrl,
                     artist: episode.artist ?? '',
                     name: episode.collectionName ?? '',
+                    genreList: episode.genres,
                   ),
                 ),
                 onTap: onPressed,
