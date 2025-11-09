@@ -53,7 +53,7 @@ class DownloadManager extends SafeChangeNotifier {
 
   Future<void> deleteDownload({required EpisodeMedia? audio}) async {
     if (audio?.url != null &&
-        _settingsService.getDownloadsDir() != null &&
+        _settingsService.downloadsDir != null &&
         audio?.feedUrl != null) {
       await _libraryService.removeDownload(
         episodeID: audio!.url!,
@@ -68,7 +68,7 @@ class DownloadManager extends SafeChangeNotifier {
   }
 
   Future<void> deleteAllDownloads() async {
-    if (_settingsService.getDownloadsDir() != null) {
+    if (_settingsService.downloadsDir != null) {
       await _libraryService.removeAllDownloads();
       _values.clear();
 
@@ -81,7 +81,7 @@ class DownloadManager extends SafeChangeNotifier {
     required String canceledMessage,
     required String finishedMessage,
   }) async {
-    final downloadsDir = _settingsService.getDownloadsDir();
+    final downloadsDir = _settingsService.downloadsDir;
     if (media?.url == null || downloadsDir == null) return;
     final url = media!.url!;
 

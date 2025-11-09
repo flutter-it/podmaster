@@ -8,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:window_manager/window_manager.dart';
 
 import 'app/app_config.dart';
+import 'common/extenal_path_service.dart';
 import 'common/platforms.dart';
 import 'notifications/notifications_service.dart';
 import 'player/player_manager.dart';
@@ -89,14 +90,22 @@ void registerDependencies() {
       () => PodcastManager(podcastService: di<PodcastService>()),
       dependsOn: [PodcastService],
     )
-    ..registerLazySingleton<SettingsManager>(
-      () => SettingsManager(service: di<SettingsService>()),
+    ..registerLazySingleton<ExternalPathService>(
+      () => const ExternalPathService(),
     )
-    ..registerLazySingleton<DownloadManager>(
+    ..registerSingletonWithDependencies<SettingsManager>(
+      () => SettingsManager(
+        service: di<SettingsService>(),
+        externalPathService: di<ExternalPathService>(),
+      ),
+      dependsOn: [SettingsService],
+    )
+    ..registerSingletonWithDependencies<DownloadManager>(
       () => DownloadManager(
         libraryService: di<PodcastLibraryService>(),
         settingsService: di<SettingsService>(),
         dio: di<Dio>(),
       ),
+      dependsOn: [SettingsService],
     );
 }

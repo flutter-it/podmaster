@@ -66,8 +66,8 @@ class _PodcastSearchViewHeaderState extends State<PodcastSearchViewHeader> {
   @override
   Widget build(BuildContext context) => Padding(
     padding: const EdgeInsets.symmetric(
-      horizontal: 16,
-    ).copyWith(top: 16, bottom: 4),
+      horizontal: kBigPadding,
+    ).copyWith(top: kBigPadding, bottom: kSmallPadding),
     child: TextField(
       controller: _controller,
       onChanged: di<PodcastManager>().textChangedCommand.execute,

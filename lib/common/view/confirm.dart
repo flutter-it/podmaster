@@ -113,7 +113,7 @@ class _ConfirmationDialogState<T> extends State<ConfirmationDialog<T>> {
         Row(
           children: space(
             expand: true,
-            widthGap: 16,
+            widthGap: kBigPadding,
             children: _error != null
                 ? [
                     OutlinedButton(
@@ -122,7 +122,7 @@ class _ConfirmationDialogState<T> extends State<ConfirmationDialog<T>> {
                           Navigator.of(context).pop();
                         }
                       },
-                      child: Text(l10n.confirmOk),
+                      child: Text(l10n.confirm),
                     ),
                   ]
                 : [
@@ -154,7 +154,7 @@ class _ConfirmationDialogState<T> extends State<ConfirmationDialog<T>> {
                                   }
                                 }
                               },
-                        child: Text(widget.cancelLabel ?? l10n.confirmCancel),
+                        child: Text(widget.cancelLabel ?? l10n.cancel),
                       ),
                     ...?widget.additionalActions,
                     ElevatedButton(
@@ -188,7 +188,7 @@ class _ConfirmationDialogState<T> extends State<ConfirmationDialog<T>> {
                               }
                             }
                           : null,
-                      child: Text(widget.confirmLabel ?? l10n.confirmOk),
+                      child: Text(widget.confirmLabel ?? l10n.confirm),
                     ),
                   ],
           ),

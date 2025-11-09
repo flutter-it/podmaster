@@ -1,33 +1,26 @@
-import 'dart:async';
+import 'package:flutter_it/flutter_it.dart';
 
-import 'package:safe_change_notifier/safe_change_notifier.dart';
-
+import '../common/extenal_path_service.dart';
+import '../extensions/shared_preferences_x.dart';
 import 'settings_service.dart';
 
-class SettingsManager extends SafeChangeNotifier {
-  SettingsManager({required SettingsService service}) : _service = service {
-    _propertiesChangedSub ??= _service.propertiesChanged.listen(
-      (_) => notifyListeners(),
-    );
+class SettingsManager {
+  SettingsManager({
+    required SettingsService service,
+    required ExternalPathService externalPathService,
+  }) {
+    downloadsDirCommand = Command.createAsyncNoParam(() async {
+      try {
+        final path = await externalPathService.getPathOfDirectory();
+        if (path != null) {
+          await service.setValue(SPKeys.downloads, path);
+        }
+        return service.downloadsDir;
+      } on Exception catch (e, s) {
+        return Future.error(e, s);
+      }
+    }, initialValue: service.downloadsDir);
   }
-  final SettingsService _service;
-  StreamSubscription<bool>? _propertiesChangedSub;
 
-  bool? getBool(String key) => _service.getBool(key);
-  Future<void> setBool(String key, bool value) => _service.setBool(key, value);
-
-  String? getString(String key) => _service.getString(key);
-  Future<void> setString(String key, String value) =>
-      _service.setString(key, value);
-
-  int? getInt(String key) => _service.getInt(key);
-  Future<void> setInt(String key, int value) => _service.setInt(key, value);
-
-  String? get downloadsDir => _service.getDownloadsDir();
-
-  @override
-  void dispose() {
-    _propertiesChangedSub?.cancel();
-    super.dispose();
-  }
+  late Command<void, String?> downloadsDirCommand;
 }

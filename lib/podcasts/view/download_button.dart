@@ -37,8 +37,8 @@ class DownloadButton extends StatelessWidget with WatchItMixin {
         ).data ??
         false;
 
-    final downloadsDir = watchPropertyValue(
-      (SettingsManager m) => m.downloadsDir,
+    final downloadsDir = watchValue(
+      (SettingsManager m) => m.downloadsDirCommand,
     );
 
     final radius = theme.buttonTheme.height / 2;

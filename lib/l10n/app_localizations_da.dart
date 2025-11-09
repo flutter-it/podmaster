@@ -4,15 +4,15 @@ import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
 
-/// The translations for English (`en`).
-class AppLocalizationsEn extends AppLocalizations {
-  AppLocalizationsEn([String locale = 'en']) : super(locale);
+/// The translations for Danish (`da`).
+class AppLocalizationsDa extends AppLocalizations {
+  AppLocalizationsDa([String locale = 'da']) : super(locale);
 
   @override
-  String get home => 'Home';
+  String get home => 'Hjem';
 
   @override
-  String get play => 'Play';
+  String get play => 'Afspil';
 
   @override
   String get pause => 'Pause';
@@ -21,65 +21,64 @@ class AppLocalizationsEn extends AppLocalizations {
   String get stop => 'Stop';
 
   @override
-  String get shuffle => 'Shuffle';
+  String get shuffle => 'Bland';
 
   @override
-  String get repeat => 'Repeat';
+  String get repeat => 'Gentag';
 
   @override
-  String get repeatAll => 'Repeat All';
+  String get repeatAll => 'Gentag alle';
 
   @override
-  String get next => 'Next';
+  String get next => 'Næste';
 
   @override
-  String get back => 'Back';
+  String get back => 'Tilbage';
 
   @override
-  String get fastForward30 => '30 seconds fast forward';
+  String get fastForward30 => '30 sekunders hurtig fremad';
 
   @override
-  String get rewind10 => 'Rewind 10 seconds';
+  String get rewind10 => 'Spol 10 sekunder tilbage';
 
   @override
-  String get fullWindow => 'Enter full window mode';
+  String get fullWindow => 'Gå til fuld vinduesvisning';
 
   @override
-  String get leaveFullWindow => 'Leave full window mode';
+  String get leaveFullWindow => 'Forlad fuld vinduesvisning';
 
   @override
-  String get fullScreen => 'Enter full screen mode';
+  String get fullScreen => 'Gå til fuld skærm';
 
   @override
-  String get leaveFullScreen => 'Leave full screen mode';
+  String get leaveFullScreen => 'Forlad fuld skærm';
 
   @override
-  String get playbackRate => 'Playback rate';
+  String get playbackRate => 'Afspilningshastighed';
 
   @override
-  String get addToFavorites => 'Add to favorites';
+  String get addToFavorites => 'Tilføj til favoritter';
 
   @override
-  String get removeFromFavorites => 'Remove from favorites';
+  String get removeFromFavorites => 'Fjern fra favoritter';
 
   @override
-  String get share => 'Share';
+  String get share => 'Del';
 
   @override
-  String get local => 'Local';
+  String get local => 'Lokal';
 
   @override
-  String get localAudio => 'Local Audio';
+  String get localAudio => 'Lokal musiksamling';
 
   @override
-  String get localAudioDescription =>
-      'Your music collection, stored on your computer.';
+  String get localAudioDescription => 'Din musiksamling, gemt på din computer.';
 
   @override
-  String get localAudioSubtitle => 'No internet connection needed';
+  String get localAudioSubtitle => 'Ingen internetforbindelse nødvendig';
 
   @override
-  String get music => 'Music';
+  String get music => 'Musik';
 
   @override
   String get radio => 'Radio';
@@ -91,62 +90,63 @@ class AppLocalizationsEn extends AppLocalizations {
   String get podcast => 'Podcast';
 
   @override
-  String get likedSongs => 'Liked Songs';
+  String get likedSongs => 'Favoritsange';
 
   @override
   String get likedSongsDescription =>
-      'All audio you liked. Local or from the internet.';
+      'Alt lyd du kan lide. Lokal eller fra internettet.';
 
   @override
-  String get likedSongsSubtitle => 'Press the heart button to add more titles.';
+  String get likedSongsSubtitle =>
+      'Tryk på hjerteikonet for at tilføje flere titler.';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Annuller';
 
   @override
-  String get add => 'Add';
+  String get add => 'Tilføj';
 
   @override
-  String get addTo => 'Add to:';
+  String get addTo => 'Tilføj til:';
 
   @override
-  String get deletePlaylist => 'Delete playlist';
+  String get deletePlaylist => 'Slet afspilningsliste';
 
   @override
-  String get createNewPlaylist => 'Create new playlist';
+  String get createNewPlaylist => 'Opret ny afspilningsliste';
 
   @override
-  String get playlistDialogTitleNew => 'Add playlist';
+  String get playlistDialogTitleNew => 'Tilføj afspilningsliste';
 
   @override
-  String get playlistDialogTitleEdit => 'Edit playlist';
+  String get playlistDialogTitleEdit => 'Rediger afspilningsliste';
 
   @override
-  String get save => 'Save';
+  String get save => 'Gem';
 
   @override
-  String get saveAndAuthorize => 'Save and authorize';
+  String get saveAndAuthorize => 'Gem og godkend';
 
   @override
-  String get title => 'Title';
+  String get title => 'Titel';
 
   @override
-  String get titles => 'Titles';
+  String get titles => 'Titler';
 
   @override
-  String get description => 'Description';
+  String get description => 'Beskrivelse';
 
   @override
-  String get artist => 'Artist';
+  String get artist => 'Kunstner';
 
   @override
-  String get artists => 'Artists';
+  String get artists => 'Kunstnere';
 
   @override
-  String get showArtistPage => 'Show artist page';
+  String get showArtistPage => 'Vis kunstnerside';
 
   @override
-  String get showAlbumPage => 'Show album page';
+  String get showAlbumPage => 'Vis albumside';
 
   @override
   String get album => 'Album';
@@ -155,127 +155,127 @@ class AppLocalizationsEn extends AppLocalizations {
   String get albums => 'Albums';
 
   @override
-  String get genres => 'Genres';
+  String get genres => 'Genrer';
 
   @override
   String get genre => 'Genre';
 
   @override
-  String get years => 'Years';
+  String get years => 'År';
 
   @override
-  String get year => 'Year';
+  String get year => 'År';
 
   @override
-  String get albumArtist => 'Album artist';
+  String get albumArtist => 'Albumkunstner';
 
   @override
-  String get albumArtists => 'Album artists';
+  String get albumArtists => 'Albumkunstnere';
 
   @override
-  String get track => 'Track';
+  String get track => 'Spor';
 
   @override
-  String get trackNumber => 'Track number';
+  String get trackNumber => 'Spor nummer';
 
   @override
-  String get diskNumber => 'CD number';
+  String get diskNumber => 'CD nummer';
 
   @override
-  String get totalDisks => 'CDs';
+  String get totalDisks => 'CD\'er';
 
   @override
-  String get searchLocalAudioHint => 'Search local audio';
+  String get searchLocalAudioHint => 'Søg i lokal lyd';
 
   @override
-  String get library => 'Library';
+  String get library => 'Bibliotek';
 
   @override
-  String get playlists => 'Playlists';
+  String get playlists => 'Afspilningslister';
 
   @override
-  String get playlist => 'Playlist';
+  String get playlist => 'Afspilningsliste';
 
   @override
-  String get discover => 'Discover';
+  String get discover => 'Opdag';
 
   @override
-  String get forYou => 'For you';
+  String get forYou => 'Til dig';
 
   @override
-  String get search => 'Search';
+  String get search => 'Søg';
 
   @override
   String get noPodcastFound =>
-      'Sorry, no podcast was found with this search query.';
+      'Beklager, ingen podcast blev fundet med denne søgning.';
 
   @override
   String get noPodcastChartsFound =>
-      'Sorry, no charts available for this country or category.';
+      'Beklager, ingen hitliste er tilgængelige for dette land eller kategori.';
 
   @override
   String get noPodcastSubsFound =>
-      'You haven\'t subscribed to any podcast yet.';
+      'Du har endnu ikke abonneret på nogen podcast.';
 
   @override
-  String get charts => 'Charts';
+  String get charts => 'Hitliste';
 
   @override
-  String get upNext => 'Up next';
+  String get upNext => 'Næste';
 
   @override
-  String get all => 'All';
+  String get all => 'Alle';
 
   @override
-  String get arts => 'Arts';
+  String get arts => 'Kunst';
 
   @override
-  String get business => 'Business';
+  String get business => 'Forretning';
 
   @override
-  String get comedy => 'Comedy';
+  String get comedy => 'Komik';
 
   @override
-  String get education => 'Education';
+  String get education => 'Uddannelse';
 
   @override
-  String get fiction => 'Fiction';
+  String get fiction => 'Fiktion';
 
   @override
-  String get government => 'Government';
+  String get government => 'Ledelse';
 
   @override
-  String get healthAndFitness => 'Health & Fitness';
+  String get healthAndFitness => 'Sundhed og fitness';
 
   @override
-  String get history => 'History';
+  String get history => 'Historie';
 
   @override
-  String get kidsAndFamily => 'Kids & Family';
+  String get kidsAndFamily => 'Børn og familie';
 
   @override
-  String get leisure => 'Leisure';
+  String get leisure => 'Fritid';
 
   @override
-  String get news => 'News';
+  String get news => 'Nyheder';
 
   @override
-  String get religionAndSpirituality => 'Religion & Spirituality';
+  String get religionAndSpirituality => 'Religion og spiritualitet';
 
   @override
-  String get science => 'Science';
+  String get science => 'Videnskab';
 
   @override
-  String get societyAndCulture => 'Society & Culture';
+  String get societyAndCulture => 'Samfund og kultur';
 
   @override
-  String get sports => 'Sports';
+  String get sports => 'Sport';
 
   @override
-  String get tvAndFilm => 'TV & Film';
+  String get tvAndFilm => 'TV og film';
 
   @override
-  String get technology => 'Technology';
+  String get technology => 'Teknologi';
 
   @override
   String get trueCrime => 'True Crime';
@@ -285,62 +285,62 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get offlineDescription =>
-      'It looks like your computer is not connected to the internet.';
+      'Det ser ud til, at din computer ikke er tilsluttet internettet.';
 
   @override
-  String get newEpisodeAvailable => 'New episode available:';
+  String get newEpisodeAvailable => 'Ny episode tilgængelig:';
 
   @override
   String get noStationFound =>
-      'Sorry, no stations found with this search query';
+      'Beklager, ingen stationer blev fundet med denne søgning';
 
   @override
-  String get nothingFound => 'Nothing found';
+  String get nothingFound => 'Intet fundet';
 
   @override
-  String get noStarredStations => 'You haven\'t starred any stations yet.';
+  String get noStarredStations => 'Du har endnu ikke markeret nogen stationer.';
 
   @override
   String get tags => 'Tags';
 
   @override
-  String get quality => 'Quality';
+  String get quality => 'Kvalitet';
 
   @override
   String get station => 'Station';
 
   @override
-  String get stations => 'Stations';
+  String get stations => 'Stationer';
 
   @override
-  String get country => 'Country';
+  String get country => 'Land';
 
   @override
   String get tag => 'Tag';
 
   @override
-  String get failedToImport => 'Failed to import the following files:';
+  String get failedToImport => 'Kunne ikke importere følgende filer:';
 
   @override
-  String get unknown => 'Unknown';
+  String get unknown => 'Ukendt';
 
   @override
-  String get volume => 'Volume';
+  String get volume => 'Volumen';
 
   @override
-  String get queue => 'Queue';
+  String get queue => 'Kø';
 
   @override
-  String get clearQueue => 'Clear queue';
+  String get clearQueue => 'Ryd kø';
 
   @override
-  String get limit => 'Limit';
+  String get limit => 'Begrænsning';
 
   @override
-  String get decreaseSearchLimit => 'Please decrease the search limit for';
+  String get decreaseSearchLimit => 'Venligst sænk søgegrænsen for';
 
   @override
-  String get podcastFeedIsEmpty => 'Sorry, this podcast\'s feed is empty.';
+  String get podcastFeedIsEmpty => 'Beklager, denne podcasts feed er tom.';
 
   @override
   String get video => 'Video';
@@ -350,105 +350,105 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get noLocalTitlesFound =>
-      'It looks like your local music collection is empty. Check your library location in the settings.';
+      'Det ser ud til, at din lokale musiksamling er tom. Tjek din biblioteksplacering i indstillingerne.';
 
   @override
   String get noLocalSearchFound =>
-      'Sorry, no local music found for this search query.';
+      'Beklager, ingen lokal musik blev fundet til denne søgning.';
 
   @override
   String get buyMusicOnline =>
-      'Maybe here you\'ll find music that you\'d like to buy:';
+      'Måske finder du musik her, som du gerne vil købe:';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Indstillinger';
 
   @override
-  String get findUsOnGitHub => 'Find us on GitHub';
+  String get findUsOnGitHub => 'Find os på GitHub';
 
   @override
-  String get musicPodSubTitle => 'Your Music, Radio and Podcast Player';
+  String get musicPodSubTitle => 'Din musik-, radio- og podcast-afspiller';
 
   @override
-  String get pickMusicCollection => 'Pick your music collection';
+  String get pickMusicCollection => 'Vælg din musiksamling';
 
   @override
-  String get newEpisode => 'New';
+  String get newEpisode => 'Ny';
 
   @override
-  String get dontShowAgain => 'Don\'t show again';
+  String get dontShowAgain => 'Vis ikke igen';
 
   @override
   String queueConfirmMessage(String length) {
-    return 'Do you really want to enqueue $length medias?';
+    return 'Vil du virkelig tilføje $length medier til køen?';
   }
 
   @override
-  String get emptyPlaylist => 'This playlist is empty.';
+  String get emptyPlaylist => 'Denne afspilningsliste er tom.';
 
   @override
-  String get copiedToClipBoard => 'Copied to clipboard:';
+  String get copiedToClipBoard => 'Kopieret til udklipsholder:';
 
   @override
-  String get copyToClipBoard => 'Copy to clipboard';
+  String get copyToClipBoard => 'Kopier til udklipsholder';
 
   @override
-  String get insertIntoQueue => 'Insert into queue';
+  String get insertIntoQueue => 'Indsæt i køen';
 
   @override
   String insertedIntoQueue(String name) {
-    return 'Inserted to queue: $name';
+    return 'Indsat i kø: $name';
   }
 
   @override
-  String get about => 'About';
+  String get about => 'Om';
 
   @override
   String localAudioCacheSuggestion(String length) {
-    return 'You have $length local audio files. Do you want to create a cache to improve start-up time?';
+    return 'Du har $length lokale lydfiler. Vil du oprette en cache for at forbedre opstartstiden?';
   }
 
   @override
-  String get noThankYou => 'No, thank you.';
+  String get noThankYou => 'Nej tak.';
 
   @override
-  String get recreateLocalAudioCache => 'Recreate local audio cache';
+  String get recreateLocalAudioCache => 'Genopret lokal lydcache';
 
   @override
-  String get useALocalAudioCache => 'Use local audio cache';
+  String get useALocalAudioCache => 'Brug lokal lydcache';
 
   @override
-  String get newEpisodes => 'New Episodes';
+  String get newEpisodes => 'Nye episoder';
 
   @override
-  String get collection => 'Collection';
+  String get collection => 'Samling';
 
   @override
-  String get addToCollection => 'Add to collection';
+  String get addToCollection => 'Tilføj til samling';
 
   @override
-  String get removeFromCollection => 'Remove from collection';
+  String get removeFromCollection => 'Fjern fra samling';
 
   @override
-  String get loadingPodcastFeed => 'Loading podcast feed...';
+  String get loadingPodcastFeed => 'Indlæser podcast feed...';
 
   @override
   String downloadStarted(String name) {
-    return 'Download started: $name';
+    return 'Download startet: $name';
   }
 
   @override
   String downloadCancelled(String name) {
-    return 'Download cancelled: $name';
+    return 'Download annulleret: $name';
   }
 
   @override
   String downloadFinished(String name) {
-    return 'Download finished: $name';
+    return 'Download færdig: $name';
   }
 
   @override
-  String get markAllEpisodesAsDone => 'Mark all episodes as done';
+  String get markAllEpisodesAsDone => 'Markér alle episoder som færdige';
 
   @override
   String get markEpisodeAsDone => 'Mark episode as done';
@@ -460,167 +460,168 @@ class AppLocalizationsEn extends AppLocalizations {
   String get showCompletedEpisodes => 'Show completed episodes';
 
   @override
-  String get reset => 'Reset';
+  String get reset => 'Nulstil';
 
   @override
-  String get resetAllSettings => 'Reset all settings';
+  String get resetAllSettings => 'Nulstil alle indstillinger';
 
   @override
   String get resetAllSettingsConfirm =>
-      'Are you absolutely sure to reset all settings, your podcast subscriptions, your podcast progress, your starred stations and your pinned albums?  The app will be closed after and you need to re-open it.';
+      'Er du helt sikker på at nulstille alle indstillinger, dine podcastabonnementer, din podcaststatus, dine stjernemarkerede stationer og dine fastgjorte album? Appen lukkes derefter, og du skal åbne den igen.';
 
   @override
-  String get confirm => 'Confirm';
+  String get confirm => 'Bekræft';
 
   @override
-  String get confirmation => 'Confirmation';
+  String get confirmation => 'Bekræftelse';
 
   @override
-  String get isMaybeLowBandwidthDialogTitle => 'No WIFI/Ethernet';
+  String get isMaybeLowBandwidthDialogTitle => 'Ingen Wi-Fi/Ethernet';
 
   @override
   String get isMaybeLowBandwidthDialogBody =>
-      'You are not connected to WIFI or Ethernet. Do you want to enable data safe mode?';
+      'Du har ikke forbindelse til WIFI eller Ethernet. Vil du aktivere datasikkerhedstilstand?';
 
   @override
-  String get isBackInWifiDialogTitle => 'Back in WIFI/Ethernet';
+  String get isBackInWifiDialogTitle => 'Tilbage til WIFI/Ethernet';
 
   @override
   String get isBackInWifiDialogBody =>
-      'You are connected to WIFI or Ethernet. Do you want to disable data safe mode?';
+      'Du er forbundet til WIFI eller Ethernet. Vil du deaktivere datasikkerhedstilstand?';
 
   @override
-  String get enableDataSafeModeSettingTitle => 'Data safe mode';
+  String get enableDataSafeModeSettingTitle => 'Datasikker tilstand';
 
   @override
   String get dataSafeModeEnabled =>
-      'Mobile Connection: Data safe mode enabled.';
+      'Mobilforbindelse: Datasikker tilstand aktiveret.';
 
   @override
-  String get dataSafeModeDisabled => 'Wifi/Ethernet: Data safe mode disabled.';
+  String get dataSafeModeDisabled =>
+      'Wifi/Ethernet: Datasikker tilstand deaktiveret.';
 
   @override
   String get enableDataSafeModeSettingDescription =>
-      'When active the player will not try to download artwork of titles send from radio stations.';
+      'Når den er aktiv, vil afspilleren ikke forsøge at downloade billeder til titler sendt fra radiostationer.';
 
   @override
-  String get stopToNotifyAboutDataSafeMode => 'Stop to notify me';
+  String get stopToNotifyAboutDataSafeMode => 'Stop for at underrette mig';
 
   @override
-  String get notifyMeAboutDataSafeModeTitle => 'Data safe mode notifications';
+  String get notifyMeAboutDataSafeModeTitle => 'Meddelelser om datasikkerhed';
 
   @override
   String get notifyMeAboutDataSafeModeDescription =>
-      'Notify me about data safe mode';
+      'Giv mig besked om datasikker tilstand';
 
   @override
-  String get resourceSectionTitle => 'Device resources';
+  String get resourceSectionTitle => 'Enhedens ressourcer';
 
   @override
-  String get downloadsOnly => 'Downloads only';
+  String get downloadsOnly => 'Kun downloads';
 
   @override
-  String get downloadsDirectory => 'Location of your downloads';
+  String get downloadsDirectory => 'Placering af dine overførsler';
 
   @override
   String downloadsDirectoryDescription(String appName) {
-    return 'Make sure $appName can access this directory!';
+    return 'Sørg for, at MusicPod har adgang til denne mappe!';
   }
 
   @override
   String get downloadsChangeWarning =>
-      'Changing the downloads directory deletes all current downloads. Do you want to proceed?';
+      'Hvis du ændrer downloadmappen, slettes alle aktuelle downloads. Vil du fortsætte?';
 
   @override
-  String get moreOptions => 'More options';
+  String get moreOptions => 'Flere muligheder';
 
   @override
-  String get noRadioServerFound => 'No radio server found';
+  String get noRadioServerFound => 'Ingen radiotjeneste fundet';
 
   @override
-  String get connectedTo => 'Connected to';
+  String get connectedTo => 'Forbundet til';
 
   @override
-  String get connectedToDiscord => 'Connected to Discord';
+  String get connectedToDiscord => 'Forbundet til Discord';
 
   @override
-  String get disconnectedFrom => 'Disconnected from';
+  String get disconnectedFrom => 'Afbrudt fra';
 
   @override
-  String get disconnectedFromDiscord => 'Disconnected from Discord';
+  String get disconnectedFromDiscord => 'Afbrudt fra Discord';
 
   @override
-  String get tryReconnect => 'Try reconnect';
+  String get tryReconnect => 'Prøv at genforbinde';
 
   @override
-  String get addedTo => 'Added to';
+  String get addedTo => 'Tilføjet til';
 
   @override
-  String get addToPlaylist => 'Add to playlist';
+  String get addToPlaylist => 'Tilføj til afspilningsliste';
 
   @override
-  String get open => 'Open';
+  String get open => 'Åbn';
 
   @override
-  String get removeFrom => 'Remove from';
+  String get removeFrom => 'Fjern fra';
 
   @override
   String get noCountryFound =>
-      'No country can be found with this name. You can also use phone prefixes such as +49';
+      'Der kan ikke findes noget land med dette navn. Du kan også bruge telefonpræfikser som +49';
 
   @override
-  String get noStarredTags => 'You didn\'t star any tags yet';
+  String get noStarredTags => 'Du har endnu ikke markeret nogen tags.';
 
   @override
-  String get name => 'Name';
+  String get name => 'Navn';
 
   @override
-  String get state => 'State';
+  String get state => 'Stat';
 
   @override
-  String get playNext => 'Play next';
+  String get playNext => 'Afspil næste';
 
   @override
-  String get contributors => 'Contributors';
+  String get contributors => 'Bidragsydere';
 
   @override
   String get version => 'Version';
 
   @override
-  String get theme => 'Theme';
+  String get theme => 'Tema';
 
   @override
-  String get useMoreAnimationsTitle => 'Use more animations';
+  String get useMoreAnimationsTitle => 'Brug flere animationer';
 
   @override
   String get useMoreAnimationsDescription =>
-      'This will slightly increase the CPU usage, which might be undesired on older hardware.';
+      'Dette vil øge CPU-forbruget en smule, hvilket kan være uønsket på ældre hardware.';
 
   @override
   String get showPositionDurationTitle =>
-      'Show position / duration in bottom player';
+      'Vis position/varighed i nederste afspiller';
 
   @override
   String get showPositionDurationDescription =>
-      'It is otherwise always shown on track hover and in the full screen player.';
+      'Den vises ellers altid, når du holder musen over banen, og i fuldskærmsafspilleren.';
 
   @override
-  String get license => 'License';
+  String get license => 'Licens';
 
   @override
-  String get dependencies => 'Dependencies';
+  String get dependencies => 'Afhængigheder';
 
   @override
-  String get light => 'Light';
+  String get light => 'Lys';
 
   @override
   String get system => 'System';
 
   @override
-  String get dark => 'Dark';
+  String get dark => 'Mørk';
 
   @override
-  String get podcastProvider => 'Podcast Provider';
+  String get podcastProvider => 'Podcastudbyder';
 
   @override
   String get iTunes => 'iTunes';
@@ -629,25 +630,25 @@ class AppLocalizationsEn extends AppLocalizations {
   String get podcastIndex => 'Podcast Index';
 
   @override
-  String get usePodcastIndex => 'Use Podcast Index instead of iTunes';
+  String get usePodcastIndex => 'Brug Podcast Index i stedet for iTunes';
 
   @override
-  String get select => 'Select';
+  String get select => 'Vælg';
 
   @override
-  String get requiresAppRestart => 'Requires app restart';
+  String get requiresAppRestart => 'Kræver genstart af app';
 
   @override
-  String get musicCollectionLocation => 'Music collection location';
+  String get musicCollectionLocation => 'Placering af musiksamling';
 
   @override
-  String get astronomyXXXPodcastIndexOnly => 'Astronomy';
+  String get astronomyXXXPodcastIndexOnly => 'Astronomi';
 
   @override
-  String get automotiveXXXPodcastIndexOnly => 'Automotive';
+  String get automotiveXXXPodcastIndexOnly => 'Bilbranchen';
 
   @override
-  String get aviationXXXPodcastIndexOnly => 'Aviation';
+  String get aviationXXXPodcastIndexOnly => 'Luftfart';
 
   @override
   String get baseballXXXPodcastIndexOnly => 'Baseball';
@@ -656,73 +657,73 @@ class AppLocalizationsEn extends AppLocalizations {
   String get basketballXXXPodcastIndexOnly => 'Basketball';
 
   @override
-  String get beautyXXXPodcastIndexOnly => 'Beauty';
+  String get beautyXXXPodcastIndexOnly => 'Skønhed';
 
   @override
-  String get booksXXXPodcastIndexOnly => 'Books';
+  String get booksXXXPodcastIndexOnly => 'Bøger';
 
   @override
-  String get buddhismXXXPodcastIndexOnly => 'Buddhism';
+  String get buddhismXXXPodcastIndexOnly => 'Buddhisme';
 
   @override
-  String get careersXXXPodcastIndexOnly => 'Careers';
+  String get careersXXXPodcastIndexOnly => 'Karriere';
 
   @override
-  String get chemistryXXXPodcastIndexOnly => 'Chemistry';
+  String get chemistryXXXPodcastIndexOnly => 'Kemi';
 
   @override
-  String get christianityXXXPodcastIndexOnly => 'Christianity';
+  String get christianityXXXPodcastIndexOnly => 'Kristendom';
 
   @override
-  String get climateXXXPodcastIndexOnly => 'Climate';
+  String get climateXXXPodcastIndexOnly => 'Klima';
 
   @override
-  String get commentaryXXXPodcastIndexOnly => 'Commentary';
+  String get commentaryXXXPodcastIndexOnly => 'Kommentar';
 
   @override
-  String get coursesXXXPodcastIndexOnly => 'Courses';
+  String get coursesXXXPodcastIndexOnly => 'Kurser';
 
   @override
-  String get craftsXXXPodcastIndexOnly => 'Crafts';
+  String get craftsXXXPodcastIndexOnly => 'Håndværk';
 
   @override
   String get cricketXXXPodcastIndexOnly => 'Cricket';
 
   @override
-  String get cryptocurrencyXXXPodcastIndexOnly => 'Cryptocurrency';
+  String get cryptocurrencyXXXPodcastIndexOnly => 'Kryptocurrency';
 
   @override
-  String get cultureXXXPodcastIndexOnly => 'Culture';
+  String get cultureXXXPodcastIndexOnly => 'Kultur';
 
   @override
-  String get dailyXXXPodcastIndexOnly => 'Daily';
+  String get dailyXXXPodcastIndexOnly => 'Daglig';
 
   @override
   String get designXXXPodcastIndexOnly => 'Design';
 
   @override
-  String get documentaryXXXPodcastIndexOnly => 'Documentary';
+  String get documentaryXXXPodcastIndexOnly => 'Dokumentar';
 
   @override
   String get dramaXXXPodcastIndexOnly => 'Drama';
 
   @override
-  String get earthXXXPodcastIndexOnly => 'Earth';
+  String get earthXXXPodcastIndexOnly => 'Jord';
 
   @override
-  String get entertainmentXXXPodcastIndexOnly => 'Entertainment';
+  String get entertainmentXXXPodcastIndexOnly => 'Underholdning';
 
   @override
-  String get entrepreneurshipXXXPodcastIndexOnly => 'Entrepreneurship';
+  String get entrepreneurshipXXXPodcastIndexOnly => 'Entreprenørskab';
 
   @override
-  String get familyXXXPodcastIndexOnly => 'Family';
+  String get familyXXXPodcastIndexOnly => 'Familie';
 
   @override
   String get fantasyXXXPodcastIndexOnly => 'Fantasy';
 
   @override
-  String get fashionXXXPodcastIndexOnly => 'Fashion';
+  String get fashionXXXPodcastIndexOnly => 'Mode';
 
   @override
   String get filmXXXPodcastIndexOnly => 'Film';
@@ -731,380 +732,383 @@ class AppLocalizationsEn extends AppLocalizations {
   String get fitnessXXXPodcastIndexOnly => 'Fitness';
 
   @override
-  String get foodXXXPodcastIndexOnly => 'Food';
+  String get foodXXXPodcastIndexOnly => 'Mad';
 
   @override
-  String get footballXXXPodcastIndexOnly => 'Football';
+  String get footballXXXPodcastIndexOnly => 'Fodbold';
 
   @override
-  String get gamesXXXPodcastIndexOnly => 'Games';
+  String get gamesXXXPodcastIndexOnly => 'Spil';
 
   @override
-  String get gardenXXXPodcastIndexOnly => 'Garden';
+  String get gardenXXXPodcastIndexOnly => 'Have';
 
   @override
   String get golfXXXPodcastIndexOnly => 'Golf';
 
   @override
-  String get healthXXXPodcastIndexOnly => 'Health';
+  String get healthXXXPodcastIndexOnly => 'Sundhed';
 
   @override
-  String get hinduismXXXPodcastIndexOnly => 'Hinduism';
+  String get hinduismXXXPodcastIndexOnly => 'Hinduisme';
 
   @override
-  String get hobbiesXXXPodcastIndexOnly => 'Hobbies';
+  String get hobbiesXXXPodcastIndexOnly => 'Hobbyer';
 
   @override
   String get hockeyXXXPodcastIndexOnly => 'Hockey';
 
   @override
-  String get homeXXXPodcastIndexOnly => 'Home';
+  String get homeXXXPodcastIndexOnly => 'Hjem';
 
   @override
-  String get howToXXXPodcastIndexOnly => 'How To';
+  String get howToXXXPodcastIndexOnly => 'Sådan gør du';
 
   @override
-  String get improvXXXPodcastIndexOnly => 'Improv';
+  String get improvXXXPodcastIndexOnly => 'Improvisation';
 
   @override
   String get interviewsXXXPodcastIndexOnly => 'Interviews';
 
   @override
-  String get investingXXXPodcastIndexOnly => 'Investing';
+  String get investingXXXPodcastIndexOnly => 'Investering';
 
   @override
   String get islamXXXPodcastIndexOnly => 'Islam';
 
   @override
-  String get journalsXXXPodcastIndexOnly => 'Journals';
+  String get journalsXXXPodcastIndexOnly => 'Journaler';
 
   @override
-  String get judaismXXXPodcastIndexOnly => 'Judaism';
+  String get judaismXXXPodcastIndexOnly => 'Jødedom';
 
   @override
-  String get kidsXXXPodcastIndexOnly => 'Kids';
+  String get kidsXXXPodcastIndexOnly => 'Børn';
 
   @override
-  String get languageXXXPodcastIndexOnly => 'Language';
+  String get languageXXXPodcastIndexOnly => 'Sprog';
 
   @override
-  String get learningXXXPodcastIndexOnly => 'Learning';
+  String get learningXXXPodcastIndexOnly => 'Læring';
 
   @override
-  String get lifeXXXPodcastIndexOnly => 'Life';
+  String get lifeXXXPodcastIndexOnly => 'Liv';
 
   @override
-  String get managementXXXPodcastIndexOnly => 'Management';
+  String get managementXXXPodcastIndexOnly => 'Ledelse';
 
   @override
   String get mangaXXXPodcastIndexOnly => 'Manga';
 
   @override
-  String get marketingXXXPodcastIndexOnly => 'Marketing';
+  String get marketingXXXPodcastIndexOnly => 'Markedsføring';
 
   @override
-  String get mathematicsXXXPodcastIndexOnly => 'Mathematics';
+  String get mathematicsXXXPodcastIndexOnly => 'Matematik';
 
   @override
-  String get medicineXXXPodcastIndexOnly => 'Medicine';
+  String get medicineXXXPodcastIndexOnly => 'Medicin';
 
   @override
   String get mentalXXXPodcastIndexOnly => 'Mental';
 
   @override
-  String get naturalXXXPodcastIndexOnly => 'Natural';
+  String get naturalXXXPodcastIndexOnly => 'Naturlig';
 
   @override
-  String get natureXXXPodcastIndexOnly => 'Nature';
+  String get natureXXXPodcastIndexOnly => 'Natur';
 
   @override
-  String get nonProfitXXXPodcastIndexOnly => 'Non Profit';
+  String get nonProfitXXXPodcastIndexOnly => 'Nonprofit';
 
   @override
-  String get nutritionXXXPodcastIndexOnly => 'Nutrition';
+  String get nutritionXXXPodcastIndexOnly => 'Ernæring';
 
   @override
-  String get parentingXXXPodcastIndexOnly => 'Parenting';
+  String get parentingXXXPodcastIndexOnly => 'Forældre';
 
   @override
-  String get performingXXXPodcastIndexOnly => 'Performing';
+  String get performingXXXPodcastIndexOnly => 'Opførelse';
 
   @override
-  String get personalXXXPodcastIndexOnly => 'Personal';
+  String get personalXXXPodcastIndexOnly => 'Personlig';
 
   @override
-  String get petsXXXPodcastIndexOnly => 'Pets';
+  String get petsXXXPodcastIndexOnly => 'Kæledyr';
 
   @override
-  String get philosophyXXXPodcastIndexOnly => 'Philosophy';
+  String get philosophyXXXPodcastIndexOnly => 'Filosofi';
 
   @override
-  String get physicsXXXPodcastIndexOnly => 'Physics';
+  String get physicsXXXPodcastIndexOnly => 'Fysik';
 
   @override
-  String get placesXXXPodcastIndexOnly => 'Places';
+  String get placesXXXPodcastIndexOnly => 'Steder';
 
   @override
-  String get politicsXXXPodcastIndexOnly => 'Politics';
+  String get politicsXXXPodcastIndexOnly => 'Politik';
 
   @override
-  String get relationshipsXXXPodcastIndexOnly => 'Relationships';
+  String get relationshipsXXXPodcastIndexOnly => 'Relationer';
 
   @override
   String get religionXXXPodcastIndexOnly => 'Religion';
 
   @override
-  String get reviewsXXXPodcastIndexOnly => 'Reviews';
+  String get reviewsXXXPodcastIndexOnly => 'Anmeldelser';
 
   @override
-  String get rolePlayingXXXPodcastIndexOnly => 'Role Playing';
+  String get rolePlayingXXXPodcastIndexOnly => 'Rollespil';
 
   @override
   String get rugbyXXXPodcastIndexOnly => 'Rugby';
 
   @override
-  String get runningXXXPodcastIndexOnly => 'Running';
+  String get runningXXXPodcastIndexOnly => 'Løb';
 
   @override
-  String get selfImprovementXXXPodcastIndexOnly => 'Self Improvement';
+  String get selfImprovementXXXPodcastIndexOnly => 'Selvforbedring';
 
   @override
-  String get sexualityXXXPodcastIndexOnly => 'Sexuality';
+  String get sexualityXXXPodcastIndexOnly => 'Seksualitet';
 
   @override
-  String get soccerXXXPodcastIndexOnly => 'Soccer';
+  String get soccerXXXPodcastIndexOnly => 'Fodbold';
 
   @override
   String get socialXXXPodcastIndexOnly => 'Social';
 
   @override
-  String get societyXXXPodcastIndexOnly => 'Society';
+  String get societyXXXPodcastIndexOnly => 'Samfund';
 
   @override
-  String get spiritualityXXXPodcastIndexOnly => 'Spirituality';
+  String get spiritualityXXXPodcastIndexOnly => 'Spiritualitet';
 
   @override
-  String get standUpXXXPodcastIndexOnly => 'StandUp';
+  String get standUpXXXPodcastIndexOnly => 'Stand-up';
 
   @override
-  String get storiesXXXPodcastIndexOnly => 'Stories';
+  String get storiesXXXPodcastIndexOnly => 'Historier';
 
   @override
-  String get swimmingXXXPodcastIndexOnly => 'Swimming';
+  String get swimmingXXXPodcastIndexOnly => 'Svømning';
 
   @override
   String get tVXXXPodcastIndexOnly => 'TV';
 
   @override
-  String get tabletopXXXPodcastIndexOnly => 'Tabletop';
+  String get tabletopXXXPodcastIndexOnly => 'Bordspil';
 
   @override
   String get tennisXXXPodcastIndexOnly => 'Tennis';
 
   @override
-  String get travelXXXPodcastIndexOnly => 'Travel';
+  String get travelXXXPodcastIndexOnly => 'Rejser';
 
   @override
-  String get videoGamesXXXPodcastIndexOnly => 'Video Games';
+  String get videoGamesXXXPodcastIndexOnly => 'Videospil';
 
   @override
-  String get visualXXXPodcastIndexOnly => 'Visual';
+  String get visualXXXPodcastIndexOnly => 'Visuel';
 
   @override
   String get volleyballXXXPodcastIndexOnly => 'Volleyball';
 
   @override
-  String get weatherXXXPodcastIndexOnly => 'Weather';
+  String get weatherXXXPodcastIndexOnly => 'Vejr';
 
   @override
-  String get wildernessXXXPodcastIndexOnly => 'Wilderness';
+  String get wildernessXXXPodcastIndexOnly => 'Vildmark';
 
   @override
-  String get wrestlingXXXPodcastIndexOnly => 'Wrestling';
+  String get wrestlingXXXPodcastIndexOnly => 'Brydning';
 
   @override
-  String get updateAvailable => 'Update available';
+  String get updateAvailable => 'Opdatering tilgængelig';
 
   @override
-  String get showMetaData => 'Show metadata';
+  String get showMetaData => 'Vis metadata';
 
   @override
   String get metadata => 'Metadata';
 
   @override
-  String get writeMetadata => 'Write metadata';
+  String get writeMetadata => 'Skriv metadata';
 
   @override
-  String get reorder => 'Reorder';
+  String get reorder => 'Omarranger';
 
   @override
-  String get move => 'Move';
+  String get move => 'Flyt';
 
   @override
-  String get pinAlbum => 'Pin album to sidebar';
+  String get pinAlbum => 'Fastgør album til sidebjælken';
 
   @override
-  String get unPinAlbum => 'Unpin album from sidebar';
+  String get unPinAlbum => 'Frigør album fra sidepanelet';
 
   @override
-  String get playAll => 'Play all';
+  String get playAll => 'Afspil alle';
 
   @override
-  String get hearingHistory => 'Hearing history';
+  String get hearingHistory => 'Afspilningshistorik';
 
   @override
   String get emptyHearingHistory =>
-      'You did not listen to radio in this app session yet';
+      'Du har ikke lyttet til radio i denne app-session endnu';
 
   @override
   String get searchForRadioStationsWithGenreName =>
-      'Search for radio stations with this genre';
+      'Søg efter radiostationer med denne genre';
 
   @override
-  String get clearPlaylist => 'Delete all media from the playlist';
+  String get clearPlaylist => 'Slet alle medier fra afspilningslisten';
 
   @override
-  String get editPlaylist => 'Edit playlist';
+  String get editPlaylist => 'Rediger afspilningsliste';
 
   @override
-  String get stationUrl => 'Station Url';
+  String get stationUrl => 'Stations-URL';
 
   @override
-  String get podcastFeedUrl => 'Podcast feed url';
+  String get podcastFeedUrl => 'Podcast-feed URL';
 
   @override
-  String get stationName => 'Station name';
+  String get stationName => 'Stationsnavn';
 
   @override
-  String get podcastName => 'Podcast name';
+  String get podcastName => 'Podcast-navn';
 
   @override
-  String get url => 'Url';
+  String get url => 'URL';
 
   @override
-  String get loadFromFileOptional => 'Load from file (optional)';
+  String get loadFromFileOptional => 'Indlæs fra fil (valgfrit)';
 
   @override
   String get exportPinnedAlbumsToM3UFiles =>
-      'Export pinned albums to M3U files';
+      'Eksportér fastgjorte albums til M3U filer';
 
   @override
-  String get exportPinnedAlbumToM3UFile => 'Export pinned albums to M3U file';
+  String get exportPinnedAlbumToM3UFile =>
+      'Eksportér fastgjorte albums til M3U file';
 
   @override
-  String get exportPlaylistToM3UFile => 'Export playlist to M3U';
+  String get exportPlaylistToM3UFile => 'Eksportér afspilningsliste til M3U';
 
   @override
   String get exportPlaylistsAndAlbumsToM3UFiles =>
-      'Export playlists and albums to M3U files';
+      'Eksporter afspilningslister og album til M3U-filer';
 
   @override
-  String get exportPodcastsToOpmlFile => 'Export podcasts to OPML file';
+  String get exportPodcastsToOpmlFile => 'Eksporter podcasts til OPML fil';
 
   @override
-  String get importPodcastsFromOpmlFile => 'Import podcasts from OPML file';
+  String get importPodcastsFromOpmlFile => 'Importer podcasts fra OPML fil';
 
   @override
   String get exportStarredStationsToOpmlFile =>
-      'Export starred stations to OPML file';
+      'Eksporter stjernemarkerede stationer til OPML fil';
 
   @override
   String get importStarredStationsFromOpmlFile =>
-      'Import starred stations from OPML file';
+      'Importer stjernemarkerede stationer fra OPML fil';
 
   @override
-  String get removeAllStarredStations => 'Remove all starred stations';
+  String get removeAllStarredStations =>
+      'Fjern alle stjernemarkerede stationer';
 
   @override
   String get removeAllStarredStationsConfirm =>
-      'Are you sure you want to remove all starred stations?';
+      'Er du sikker på, at du vil fjerne alle stjernemarkerede stationer?';
 
   @override
   String get removeAllStarredStationsDescription =>
-      'This will remove all your starred stations.';
+      'Dette vil fjerne alle dine stjernemarkerede stationer.';
 
   @override
-  String get removeAllPodcasts => 'Remove all podcasts';
+  String get removeAllPodcasts => 'Fjern alle podcasts';
 
   @override
   String get removeAllPodcastsConfirm =>
-      'Are you sure you want to remove all podcasts?';
+      'Er du sikker på, at du vil fjerne alle podcasts?';
 
   @override
   String get removeAllPodcastsDescription =>
-      'This will remove all your podcast subscriptions and progress.';
+      'Dette vil fjerne alle dine podcastabonnementer og din status.';
 
   @override
-  String get customContentTitle => 'Add custom content';
+  String get customContentTitle => 'Tilføj brugerdefineret indhold';
 
   @override
   String get customContentDescription =>
-      'If you do not want to use the radiobrowser or podcast search feature you can add your own content here, or you can add empty playlists or import playlists from M3U and PLS files.';
+      'Hvis du ikke vil bruge radiobrowseren eller podcast-søgefunktionen, kan du tilføje dit eget indhold her, eller du kan tilføje tomme afspilningslister eller importere afspilningslister fra M3U- og PLS-filer.';
 
   @override
   String get setPlaylistNameAndAddMoreLater =>
-      'Set playlist name and add more titles later';
+      'Angiv et navn for en afspilningsliste, og tilføj flere titler senere';
 
   @override
-  String get or => 'or';
+  String get or => 'eller';
 
   @override
-  String get loadMore => 'Load more';
+  String get loadMore => 'Indlæs mere';
 
   @override
-  String get searchOnline => 'Search online';
+  String get searchOnline => 'Søg online';
 
   @override
-  String get shareThisEpisode => 'Share this episode';
+  String get shareThisEpisode => 'Del denne episode';
 
   @override
   String get downloadEpisode => 'Download episode';
 
   @override
-  String get removeDownloadEpisode => 'Remove episode download';
+  String get removeDownloadEpisode => 'Fjern episode download';
 
   @override
-  String get language => 'Language';
+  String get language => 'Sprog';
 
   @override
-  String get duration => 'Duration';
+  String get duration => 'Varighed';
 
   @override
-  String get radioTagDisclaimerTitle => 'This station sends a lot of tags.';
+  String get radioTagDisclaimerTitle => 'Denne station sender mange tags.';
 
   @override
   String get radioTagDisclaimerSubTitle =>
-      'Sometimes stations send tags that do not match music genres. MusicPod is not responsible for the content!';
+      'Nogle gange sender stationer tags, der ikke matcher musikgenrer. MusicPod er ikke ansvarlig for indholdet!';
 
   @override
   String get podcastFeedLoadingTimeout =>
-      'Loading the podcast feed takes longer than usual...';
+      'Indlæsning af podcast-feedet tager længere tid end normalt...';
 
   @override
   String get gitHubClientConnectError =>
-      'Could not load online version from GitHub.';
+      'Kunne ikke indlæse onlineversionen fra GitHub.';
 
   @override
-  String get replayEpisode => 'Replay episode';
+  String get replayEpisode => 'Genafspil episoden';
 
   @override
-  String get replayAllEpisodes => 'Replay all episodes';
+  String get replayAllEpisodes => 'Genafspil alle episoder';
 
   @override
-  String get checkForUpdates => 'Check for updates';
+  String get checkForUpdates => 'Tjek efter opdateringer';
 
   @override
   String checkForUpdatesConfirm(Object length) {
-    return 'Are you sure you want to check for updates for $length podcasts?';
+    return 'Er du sikker på, at du vil søge efter opdateringer til $length podcasts?';
   }
 
   @override
   String playbackWillStopIn(Object duration, Object timeOfDay) {
-    return 'Playback will stop in: $duration ($timeOfDay)';
+    return 'Afspilningen stopper om: $duration ($timeOfDay)';
   }
 
   @override
-  String get schedulePlaybackStopTimer => 'Schedule a time to stop playback';
+  String get schedulePlaybackStopTimer =>
+      'Planlæg et tidspunkt for at stoppe afspilningen';
 
   @override
   String get alwaysAsk => 'Always ask';
@@ -1150,7 +1154,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get toClick => 'click';
 
   @override
-  String get exposeOnlineHeadline => 'Expose your listening activity online';
+  String get exposeOnlineHeadline => 'Vis din lytteaktivitet online';
 
   @override
   String get exposeToDiscordTitle => 'Discord';
@@ -1326,38 +1330,38 @@ class AppLocalizationsEn extends AppLocalizations {
   String get regionCanada => 'Canada';
 
   @override
-  String get regionCaymanislands => 'Cayman Islands';
+  String get regionCaymanislands => 'Caymanøerne';
 
   @override
-  String get regionCentralafricanrepublic => 'Central African Republic';
+  String get regionCentralafricanrepublic => 'Den Centralafrikanske Republik';
 
   @override
-  String get regionChad => 'Chad';
+  String get regionChad => 'Tchad';
 
   @override
   String get regionChile => 'Chile';
 
   @override
-  String get regionChina => 'China';
+  String get regionChina => 'Kina';
 
   @override
-  String get regionChristmasisland => 'Christmas Island';
+  String get regionChristmasisland => 'Juleøen';
 
   @override
-  String get regionCocosislands => 'Coco Islands';
+  String get regionCocosislands => 'Cocoøerne';
 
   @override
-  String get regionColombia => 'Colombia';
+  String get regionColombia => 'Columbia';
 
   @override
-  String get regionComoros => 'Comoros';
+  String get regionComoros => 'Comorerne';
 
   @override
-  String get regionCongo => 'Congo';
+  String get regionCongo => 'Kongo';
 
   @override
   String get regionCongodemocraticrepublicof =>
-      'Democratic Republic of the Congo';
+      'Den Demokratiske Republik Kongo';
 
   @override
   String get regionCookislands => 'Cook Islands';
@@ -1399,22 +1403,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get regionEcuador => 'Ecuador';
 
   @override
-  String get regionEgypt => 'Egypt';
+  String get regionEgypt => 'Egypten';
 
   @override
   String get regionElsalvador => 'El Salvador';
 
   @override
-  String get regionEquatorialguinea => 'Equatorial Guinea';
+  String get regionEquatorialguinea => 'Ækvatorialguinea';
 
   @override
   String get regionEritrea => 'Eritrea';
 
   @override
-  String get regionEstonia => 'Estonia';
+  String get regionEstonia => 'Estland';
 
   @override
-  String get regionEthiopia => 'Ethiopia';
+  String get regionEthiopia => 'Etiopien';
 
   @override
   String get regionFalklandislands => 'Falkland Islands';
@@ -1984,17 +1988,17 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pinnedAlbums => 'Pinned albums';
 
   @override
-  String get export => 'Export';
+  String get export => 'Eksportere';
 
   @override
   String get import => 'Import';
 
   @override
-  String get exportYourData => 'Export your data';
+  String get exportYourData => 'Eksportér dine data';
 
   @override
   String get exportYourDataDescription =>
-      'Export your podcast subscriptions, starred stations and pinned albums.';
+      'Eksporter dine podcastabonnementer, stjernemarkerede stationer og fastgjorte album.';
 
   @override
   String get localAudioWatchDialogTitle => 'Local audio directory was modified';
@@ -2004,7 +2008,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Do you want to reload the local audio directory?';
 
   @override
-  String get external => 'external';
+  String get external => 'ekstern';
 
   @override
   String get externalPlaylist => 'External playlist';

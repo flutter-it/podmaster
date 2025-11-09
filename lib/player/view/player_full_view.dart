@@ -141,7 +141,7 @@ class PlayerFullView extends StatelessWidget
                               const SizedBox(height: kBigPadding),
                               Padding(
                                 padding: const EdgeInsets.symmetric(
-                                  horizontal: 16,
+                                  horizontal: kBigPadding,
                                 ),
                                 child: PlayerTrackInfo(
                                   textColor: iconColor,

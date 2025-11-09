@@ -4,82 +4,82 @@ import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
 
-/// The translations for English (`en`).
-class AppLocalizationsEn extends AppLocalizations {
-  AppLocalizationsEn([String locale = 'en']) : super(locale);
+/// The translations for Dutch Flemish (`nl`).
+class AppLocalizationsNl extends AppLocalizations {
+  AppLocalizationsNl([String locale = 'nl']) : super(locale);
 
   @override
   String get home => 'Home';
 
   @override
-  String get play => 'Play';
+  String get play => 'Afspelen';
 
   @override
-  String get pause => 'Pause';
+  String get pause => 'Pauzeren';
 
   @override
-  String get stop => 'Stop';
+  String get stop => 'Stoppen';
 
   @override
-  String get shuffle => 'Shuffle';
+  String get shuffle => 'Willekeurig';
 
   @override
-  String get repeat => 'Repeat';
+  String get repeat => 'Herhalen';
 
   @override
-  String get repeatAll => 'Repeat All';
+  String get repeatAll => 'Alles herhalen';
 
   @override
-  String get next => 'Next';
+  String get next => 'Volgende';
 
   @override
-  String get back => 'Back';
+  String get back => 'Vorige';
 
   @override
-  String get fastForward30 => '30 seconds fast forward';
+  String get fastForward30 => '30 seconden vooruitspoelen';
 
   @override
-  String get rewind10 => 'Rewind 10 seconds';
+  String get rewind10 => '10 seconden terugspoelen';
 
   @override
-  String get fullWindow => 'Enter full window mode';
+  String get fullWindow => 'Venstervullende weergave aan';
 
   @override
-  String get leaveFullWindow => 'Leave full window mode';
+  String get leaveFullWindow => 'Venstervullende weergave uit';
 
   @override
-  String get fullScreen => 'Enter full screen mode';
+  String get fullScreen => 'Schermvullende weergave aan';
 
   @override
-  String get leaveFullScreen => 'Leave full screen mode';
+  String get leaveFullScreen => 'Schermvullende weergave uit';
 
   @override
-  String get playbackRate => 'Playback rate';
+  String get playbackRate => 'Afspeelsnelheid';
 
   @override
-  String get addToFavorites => 'Add to favorites';
+  String get addToFavorites => 'Toevoegen aan favorieten';
 
   @override
-  String get removeFromFavorites => 'Remove from favorites';
+  String get removeFromFavorites => 'Verwijderen uit favorieten';
 
   @override
-  String get share => 'Share';
+  String get share => 'Delen';
 
   @override
-  String get local => 'Local';
+  String get local => 'Lokaal';
 
   @override
-  String get localAudio => 'Local Audio';
+  String get localAudio => 'Lokale audio';
 
   @override
   String get localAudioDescription =>
-      'Your music collection, stored on your computer.';
+      'Uw muziekverzameling, veilig op uw computer.';
 
   @override
-  String get localAudioSubtitle => 'No internet connection needed';
+  String get localAudioSubtitle => 'Geen internetverbinding benodigd';
 
   @override
-  String get music => 'Music';
+  String get music => 'Muziek';
 
   @override
   String get radio => 'Radio';
@@ -91,56 +91,57 @@ class AppLocalizationsEn extends AppLocalizations {
   String get podcast => 'Podcast';
 
   @override
-  String get likedSongs => 'Liked Songs';
+  String get likedSongs => 'Favoriete nummers';
 
   @override
   String get likedSongsDescription =>
-      'All audio you liked. Local or from the internet.';
+      'Alle audio die u als favoriet heeft gemarkeerd, zowel lokaal als van het internet.';
 
   @override
-  String get likedSongsSubtitle => 'Press the heart button to add more titles.';
+  String get likedSongsSubtitle =>
+      'Klik op de hartknop om meer nummers toe te voegen.';
 
   @override
-  String get cancel => 'Cancel';
+  String get cancel => 'Annuleren';
 
   @override
-  String get add => 'Add';
+  String get add => 'Toevoegen';
 
   @override
-  String get addTo => 'Add to:';
+  String get addTo => 'Toevoegen aan:';
 
   @override
-  String get deletePlaylist => 'Delete playlist';
+  String get deletePlaylist => 'Afspeellijst verwijderen';
 
   @override
-  String get createNewPlaylist => 'Create new playlist';
+  String get createNewPlaylist => 'Afspeellijst maken';
 
   @override
-  String get playlistDialogTitleNew => 'Add playlist';
+  String get playlistDialogTitleNew => 'Nieuwe afspeellijst';
 
   @override
-  String get playlistDialogTitleEdit => 'Edit playlist';
+  String get playlistDialogTitleEdit => 'Afspeellijst bewerken';
 
   @override
-  String get save => 'Save';
+  String get save => 'Opslaan';
 
   @override
-  String get saveAndAuthorize => 'Save and authorize';
+  String get saveAndAuthorize => 'Opslaan en verifiëren';
 
   @override
-  String get title => 'Title';
+  String get title => 'Titel';
 
   @override
-  String get titles => 'Titles';
+  String get titles => 'Titels';
 
   @override
   String get description => 'Description';
 
   @override
-  String get artist => 'Artist';
+  String get artist => 'Artiest';
 
   @override
-  String get artists => 'Artists';
+  String get artists => 'Artiesten';
 
   @override
   String get showArtistPage => 'Show artist page';
@@ -161,134 +162,132 @@ class AppLocalizationsEn extends AppLocalizations {
   String get genre => 'Genre';
 
   @override
-  String get years => 'Years';
+  String get years => 'Jaartallen';
 
   @override
-  String get year => 'Year';
+  String get year => 'Jaar';
 
   @override
-  String get albumArtist => 'Album artist';
+  String get albumArtist => 'Albumartiest';
 
   @override
-  String get albumArtists => 'Album artists';
+  String get albumArtists => 'Albumartiesten';
 
   @override
-  String get track => 'Track';
+  String get track => 'Nummer';
 
   @override
-  String get trackNumber => 'Track number';
+  String get trackNumber => 'Volgnummer';
 
   @override
-  String get diskNumber => 'CD number';
+  String get diskNumber => 'Cd-nummer';
 
   @override
-  String get totalDisks => 'CDs';
+  String get totalDisks => 'Cd\'s';
 
   @override
-  String get searchLocalAudioHint => 'Search local audio';
+  String get searchLocalAudioHint => 'Lokale audio doorzoeken';
 
   @override
-  String get library => 'Library';
+  String get library => 'Verzameling';
 
   @override
-  String get playlists => 'Playlists';
+  String get playlists => 'Afspeellijsten';
 
   @override
-  String get playlist => 'Playlist';
+  String get playlist => 'Afspeellijst';
 
   @override
-  String get discover => 'Discover';
+  String get discover => 'Ontdekken';
 
   @override
-  String get forYou => 'For you';
+  String get forYou => 'Voor u';
 
   @override
-  String get search => 'Search';
+  String get search => 'Zoeken';
 
   @override
-  String get noPodcastFound =>
-      'Sorry, no podcast was found with this search query.';
+  String get noPodcastFound => 'Er is geen podcast gevonden.';
 
   @override
   String get noPodcastChartsFound =>
-      'Sorry, no charts available for this country or category.';
+      'Er zijn geen grafieken beschikbaar binnen dit land of deze categorie.';
 
   @override
   String get noPodcastSubsFound =>
-      'You haven\'t subscribed to any podcast yet.';
+      'U bent nog niet geabonneerd op een podcast.';
 
   @override
-  String get charts => 'Charts';
+  String get charts => 'Hitlijsten';
 
   @override
-  String get upNext => 'Up next';
+  String get upNext => 'Hierna';
 
   @override
-  String get all => 'All';
+  String get all => 'Alles';
 
   @override
-  String get arts => 'Arts';
+  String get arts => 'Kunst';
 
   @override
-  String get business => 'Business';
+  String get business => 'Zakelijk';
 
   @override
-  String get comedy => 'Comedy';
+  String get comedy => 'Komedie';
 
   @override
-  String get education => 'Education';
+  String get education => 'Educatie';
 
   @override
-  String get fiction => 'Fiction';
+  String get fiction => 'Fictie';
 
   @override
-  String get government => 'Government';
+  String get government => 'Overheid';
 
   @override
-  String get healthAndFitness => 'Health & Fitness';
+  String get healthAndFitness => 'Gezondheid en fitness';
 
   @override
-  String get history => 'History';
+  String get history => 'Geschiedenis';
 
   @override
-  String get kidsAndFamily => 'Kids & Family';
+  String get kidsAndFamily => 'Kinderen en familie';
 
   @override
-  String get leisure => 'Leisure';
+  String get leisure => 'Vrijetijdsbesteding';
 
   @override
-  String get news => 'News';
+  String get news => 'Nieuws';
 
   @override
-  String get religionAndSpirituality => 'Religion & Spirituality';
+  String get religionAndSpirituality => 'Religie en spiritualiteit';
 
   @override
-  String get science => 'Science';
+  String get science => 'Wetenschap';
 
   @override
-  String get societyAndCulture => 'Society & Culture';
+  String get societyAndCulture => 'Maatschappijleer';
 
   @override
-  String get sports => 'Sports';
+  String get sports => 'Sport';
 
   @override
-  String get tvAndFilm => 'TV & Film';
+  String get tvAndFilm => 'Tv en film';
 
   @override
-  String get technology => 'Technology';
+  String get technology => 'Technologie';
 
   @override
-  String get trueCrime => 'True Crime';
+  String get trueCrime => 'True crime';
 
   @override
-  String get offline => 'offline';
+  String get offline => 'Offline';
 
   @override
-  String get offlineDescription =>
-      'It looks like your computer is not connected to the internet.';
+  String get offlineDescription => 'Er lijkt geen internetverbinding te zijn.';
 
   @override
-  String get newEpisodeAvailable => 'New episode available:';
+  String get newEpisodeAvailable => 'Nieuwe aflevering beschikbaar:';
 
   @override
   String get noStationFound =>
@@ -322,129 +321,128 @@ class AppLocalizationsEn extends AppLocalizations {
   String get failedToImport => 'Failed to import the following files:';
 
   @override
-  String get unknown => 'Unknown';
+  String get unknown => 'Onbekend';
 
   @override
-  String get volume => 'Volume';
+  String get volume => 'Volumeniveau';
 
   @override
-  String get queue => 'Queue';
+  String get queue => 'Wachtrij';
 
   @override
   String get clearQueue => 'Clear queue';
 
   @override
-  String get limit => 'Limit';
+  String get limit => 'Beperking';
 
   @override
-  String get decreaseSearchLimit => 'Please decrease the search limit for';
+  String get decreaseSearchLimit => 'Beperk het aantal tekens van';
 
   @override
-  String get podcastFeedIsEmpty => 'Sorry, this podcast\'s feed is empty.';
+  String get podcastFeedIsEmpty => 'Deze feed is leeg.';
 
   @override
   String get video => 'Video';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'Oké';
 
   @override
   String get noLocalTitlesFound =>
-      'It looks like your local music collection is empty. Check your library location in the settings.';
+      'Uw lokale muziekverzameling is leeg. Controleer de locatie in de voorkeuren.';
 
   @override
-  String get noLocalSearchFound =>
-      'Sorry, no local music found for this search query.';
+  String get noLocalSearchFound => 'Er zijn geen zoekresultaten.';
 
   @override
   String get buyMusicOnline =>
-      'Maybe here you\'ll find music that you\'d like to buy:';
+      'Hier vindt u wellicht muziek die u wilt aanschaffen:';
 
   @override
-  String get settings => 'Settings';
+  String get settings => 'Voorkeuren';
 
   @override
-  String get findUsOnGitHub => 'Find us on GitHub';
+  String get findUsOnGitHub => 'GitHub-pagina openen';
 
   @override
-  String get musicPodSubTitle => 'Your Music, Radio and Podcast Player';
+  String get musicPodSubTitle => 'Uw muziek-, radio- en podcastspeler';
 
   @override
-  String get pickMusicCollection => 'Pick your music collection';
+  String get pickMusicCollection => 'Kies uw muziekverzameling';
 
   @override
-  String get newEpisode => 'New';
+  String get newEpisode => 'Nieuw';
 
   @override
-  String get dontShowAgain => 'Don\'t show again';
+  String get dontShowAgain => 'Niet meer tonen';
 
   @override
   String queueConfirmMessage(String length) {
-    return 'Do you really want to enqueue $length medias?';
+    return 'Weet u zeker dat u $length media wilt toevoegen aan de wachtrij?';
   }
 
   @override
-  String get emptyPlaylist => 'This playlist is empty.';
+  String get emptyPlaylist => 'Deze afspeellijst is leeg.';
 
   @override
-  String get copiedToClipBoard => 'Copied to clipboard:';
+  String get copiedToClipBoard => 'Gekopieerd naar het klembord:';
 
   @override
-  String get copyToClipBoard => 'Copy to clipboard';
+  String get copyToClipBoard => 'Kopiëren naar klembord';
 
   @override
-  String get insertIntoQueue => 'Insert into queue';
+  String get insertIntoQueue => 'Toevoegen aan wachtrij';
 
   @override
   String insertedIntoQueue(String name) {
-    return 'Inserted to queue: $name';
+    return 'Toegevoegd aan wachtrij: $name';
   }
 
   @override
-  String get about => 'About';
+  String get about => 'Over';
 
   @override
   String localAudioCacheSuggestion(String length) {
-    return 'You have $length local audio files. Do you want to create a cache to improve start-up time?';
+    return 'U heeft $length lokale audiobestanden. Wilt u een cache aanleggen om de opstartduur te verkorten?';
   }
 
   @override
-  String get noThankYou => 'No, thank you.';
+  String get noThankYou => 'Nee, bedankt.';
 
   @override
-  String get recreateLocalAudioCache => 'Recreate local audio cache';
+  String get recreateLocalAudioCache => 'Lokale cache opnieuw aanleggen';
 
   @override
-  String get useALocalAudioCache => 'Use local audio cache';
+  String get useALocalAudioCache => 'Lokale audiocache gebruiken';
 
   @override
-  String get newEpisodes => 'New Episodes';
+  String get newEpisodes => 'Nieuwe afleveringen';
 
   @override
-  String get collection => 'Collection';
+  String get collection => 'Verzameling';
 
   @override
-  String get addToCollection => 'Add to collection';
+  String get addToCollection => 'Toevoegen aan verzameling';
 
   @override
-  String get removeFromCollection => 'Remove from collection';
+  String get removeFromCollection => 'Verwijderen uit verzameling';
 
   @override
-  String get loadingPodcastFeed => 'Loading podcast feed...';
+  String get loadingPodcastFeed => 'Bezig met laden van feed…';
 
   @override
   String downloadStarted(String name) {
-    return 'Download started: $name';
+    return 'Het downloaden is gestart: $name';
   }
 
   @override
   String downloadCancelled(String name) {
-    return 'Download cancelled: $name';
+    return 'Het downloaden is afgebroken: $name';
   }
 
   @override
   String downloadFinished(String name) {
-    return 'Download finished: $name';
+    return 'Het downloaden is afgerond: $name';
   }
 
   @override
@@ -517,14 +515,14 @@ class AppLocalizationsEn extends AppLocalizations {
   String get resourceSectionTitle => 'Device resources';
 
   @override
-  String get downloadsOnly => 'Downloads only';
+  String get downloadsOnly => 'Alleen downloads';
 
   @override
-  String get downloadsDirectory => 'Location of your downloads';
+  String get downloadsDirectory => 'Downloadlocatie';
 
   @override
   String downloadsDirectoryDescription(String appName) {
-    return 'Make sure $appName can access this directory!';
+    return 'Zorg ervoor dan MusicPod toegang heeft tot deze map!';
   }
 
   @override

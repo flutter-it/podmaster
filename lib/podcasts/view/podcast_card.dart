@@ -26,8 +26,14 @@ class _PodcastCardState extends State<PodcastCard> {
 
   @override
   Widget build(BuildContext context) {
-    final isLight = context.colorScheme.isLight;
+    final theme = context.theme;
+    final isLight = theme.colorScheme.isLight;
+    const borderRadiusGeometry = BorderRadiusGeometry.only(
+      topLeft: Radius.circular(12),
+      topRight: Radius.circular(12),
+    );
     return InkWell(
+      focusColor: theme.colorScheme.primary,
       borderRadius: BorderRadius.circular(12),
       onHover: (hovering) => setState(() => _hovered = hovering),
       onTap: () => showDialog(
@@ -39,7 +45,8 @@ class _PodcastCardState extends State<PodcastCard> {
         width: kGridViewDelegate.maxCrossAxisExtent,
         height: kGridViewDelegate.mainAxisExtent,
         child: Card(
-          color: (isLight ? Colors.white : context.colorScheme.onSurface)
+          margin: EdgeInsets.zero,
+          color: (isLight ? Colors.white : theme.colorScheme.onSurface)
               .withAlpha(isLight ? 200 : 40),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -49,14 +56,11 @@ class _PodcastCardState extends State<PodcastCard> {
                 alignment: Alignment.center,
                 children: [
                   AnimatedOpacity(
-                    opacity: _hovered ? 0.4 : 1,
+                    opacity: _hovered ? 0.3 : 1,
                     duration: const Duration(milliseconds: 300),
                     child: (widget.podcastItem.bestArtworkUrl != null)
                         ? ClipRRect(
-                            borderRadius: const BorderRadiusGeometry.only(
-                              topLeft: Radius.circular(8),
-                              topRight: Radius.circular(8),
-                            ),
+                            borderRadius: borderRadiusGeometry,
                             child: SizedBox(
                               width: kGridViewDelegate.maxCrossAxisExtent,
                               height: kGridViewDelegate.mainAxisExtent! - 60,
@@ -79,34 +83,18 @@ class _PodcastCardState extends State<PodcastCard> {
                   ),
                   if (_hovered)
                     Positioned.fill(
-                      child: Center(
-                        child: Column(
-                          spacing: 16,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            FloatingActionButton.small(
-                              onPressed: () async {
-                                final res = await showFutureLoadingDialog(
-                                  context: context,
-                                  future: () async => di<PodcastService>()
-                                      .findEpisodes(item: widget.podcastItem),
-                                );
-                                if (res.isValue) {
-                                  final episodes = res.asValue!.value;
-                                  if (episodes.isNotEmpty) {
-                                    await di<PlayerManager>().setPlaylist(
-                                      episodes,
-                                      index: 0,
-                                    );
-                                  }
-                                }
-                              },
-                              child: const Icon(Icons.play_arrow),
-                            ),
-                            PodcastFavoriteButton.floating(
-                              podcastItem: widget.podcastItem,
-                            ),
-                          ],
+                      child: Container(
+                        margin: EdgeInsets.zero,
+                        decoration: BoxDecoration(
+                          color: Colors.black.withAlpha(150),
+                          borderRadius: borderRadiusGeometry,
+                        ),
+                        child: const Center(
+                          child: Icon(
+                            Icons.open_in_new,
+                            size: 64,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
@@ -116,13 +104,42 @@ class _PodcastCardState extends State<PodcastCard> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Center(
-                    child: Text(
-                      widget.podcastItem.collectionName ?? '',
-                      style: Theme.of(context).textTheme.labelMedium,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 3,
-                      textAlign: TextAlign.center,
-                    ),
+                    child: _hovered
+                        ? Row(
+                            spacing: kBigPadding,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              FloatingActionButton.small(
+                                onPressed: () async {
+                                  final res = await showFutureLoadingDialog(
+                                    context: context,
+                                    future: () async => di<PodcastService>()
+                                        .findEpisodes(item: widget.podcastItem),
+                                  );
+                                  if (res.isValue) {
+                                    final episodes = res.asValue!.value;
+                                    if (episodes.isNotEmpty) {
+                                      await di<PlayerManager>().setPlaylist(
+                                        episodes,
+                                        index: 0,
+                                      );
+                                    }
+                                  }
+                                },
+                                child: const Icon(Icons.play_arrow),
+                              ),
+                              PodcastFavoriteButton.floating(
+                                podcastItem: widget.podcastItem,
+                              ),
+                            ],
+                          )
+                        : Text(
+                            widget.podcastItem.collectionName ?? '',
+                            style: Theme.of(context).textTheme.labelMedium,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 3,
+                            textAlign: TextAlign.center,
+                          ),
                   ),
                 ),
               ),
