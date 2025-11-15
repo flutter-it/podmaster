@@ -30,13 +30,13 @@ class PodcastManager {
     // Subscription doesn't need disposal - manager lives for app lifetime
     textChangedCommand
         .debounce(const Duration(milliseconds: 500))
-        .listen((filterText, sub) => updateSearchCommand.execute(filterText));
+        .listen((filterText, sub) => updateSearchCommand.run(filterText));
 
     fetchEpisodeMediaCommand = Command.createAsync<Item, List<EpisodeMedia>>(
       (podcast) => _podcastService.findEpisodes(item: podcast),
       initialValue: [],
     );
-    updateSearchCommand.execute(null);
+    updateSearchCommand.run(null);
   }
 
   final PodcastService _podcastService;
