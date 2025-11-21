@@ -324,4 +324,23 @@ class PlayerManager extends BaseAudioHandler with SeekHandler {
       printMessageInDebugMode(e);
     }
   }
+
+  @override
+  String toString() {
+    final current = currentMedia;
+    final pos = position.value;
+    final dur = duration.value;
+    final posStr = '${pos.inMinutes}:${(pos.inSeconds % 60).toString().padLeft(2, '0')}';
+    final durStr = '${dur.inMinutes}:${(dur.inSeconds % 60).toString().padLeft(2, '0')}';
+
+    return 'PlayerManager('
+        'playing: $isPlaying, '
+        'media: ${current?.title ?? current?.uri ?? 'none'}, '
+        'position: $posStr/$durStr, '
+        'playlist: ${playlistIndex + 1}/${medias.length}, '
+        'volume: ${volume.toStringAsFixed(2)}, '
+        'shuffle: $shuffle, '
+        'mode: $playlistMode'
+        ')';
+  }
 }
